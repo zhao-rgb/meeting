@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>meetingsAdd</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body class="container">
+<br/>
+<h1>添加会议</h1>
+<br/><br/>
+<div class="with:80%">
+    <form class="form-horizontal"   th:action="@{/add}"  method="post">
+        <div class="form-group">
+            <label for="people" class="col-sm-2 control-label" >people</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="people" id="people" placeholder="people"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="subject" class="col-sm-2 control-label" >subject</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="subject"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="context" class="col-sm-2 control-label">context</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="context"  id="context" placeholder="context"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" value="Submit" class="btn btn-info" />
+                &nbsp; &nbsp; &nbsp;
+                <input type="reset" value="Reset" class="btn btn-info" />
+            </div>
+
+        </div>
+    </form>
+</div>
+</body>
+</html>
