@@ -66,6 +66,13 @@ public class MeetingsController {
         return "redirect:/list";
     }
 
+    @RequestMapping("/select")
+    public String select(Model model,Integer id) {
+        Meetings select = meetingsRepository.getById(id);
+        model.addAttribute("select",select);
+        return "/meeting/list";
+    }
+
 //    @GetMapping("/getAllMerchantInfo")
 //    public List<Meetings> getAllMerchantInfo(){
 //        List<Meetings> merchantInfoList = meetingsRepository.findAll();
